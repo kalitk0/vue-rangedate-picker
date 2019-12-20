@@ -211,7 +211,7 @@ export default {
       return new Date(Date.UTC(this.activeYearStart, this.activeMonthStart, 1)).getDay()
     },
     startNextMonthDay: function () {
-      return new Date(Date.UTC(this.activeYearStart, this.startNextActiveMonth, 1)).getDay()
+      return new Date(this.activeYearStart, this.activeMonthStart, 1, 0, 0, 0).getDay(); 
     },
     endMonthDate: function () {
       return new Date(Date.UTC(this.activeYearEnd, this.startNextActiveMonth, 0)).getDate()
